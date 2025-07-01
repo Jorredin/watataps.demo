@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Reviews Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url(61e6df4cb22cf4886a50072c56cfeb64.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    a.nav-link:hover {
+      color: #cf1111 !important;
+      transition: color 0.3s ease;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(242, 239, 239, 0.6);
+    }
+
+    .intro-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro-section img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 1rem;
+    }
+
+    /* Updated List-Group Styling */
+    .list-group {
+      background-color: rgba(0, 0, 0, 0.85); /* Darker background */
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .list-group-item-action {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #fff;
+    }
+
+    .list-group-item-action:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .list-group-item-action:focus, .list-group-item-action.active {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-danger text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-glow">🎮Game Reviews Hub</h1>
+      <p class="lead fst-italic">Your ultimate daily source for the latest game news, in-depth reviews, expert recommendations, and everything you need to stay ahead in the world of gaming.</p>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviews.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">disabled</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Add somewhere in your navbar or page -->
+<button id="logoutBtn" class="btn btn-warning">Logout</button>
+
+<script>
+  document.getElementById("logoutBtn").addEventListener("click", function () {
+    localStorage.removeItem("isLoggedIn");
+    alert("You have been logged out.");
+    window.location.href = "login.html";
+  });
+</script>
+
+    </div>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="container my-5">
+    
+    <!-- Intro Section (replaces sidebar) -->
+    <section class="intro-section text-white text-glow">
+      <a href="about.html">
+      <img src="resized_300x200.jpg" alt="Jorredin">
+      </a>
+      <h2 class="mb-2">Hey, I'm Jorredin 😎</h2>
+      <p class="fst-italic">Level 99 Gamer | Honest Reviewer | Boss-Level Handsome</p>
+      <p>Sharing my thoughts on the latest games, giving you the real scoop, and helping you find your next favorite title!</p>
+    </section>
+
+    <!-- List Group for Navigation -->
+    <div class="mb-5">
+      <h4 class="text-center text-white mb-4">Explore More</h4>
+      <div class="list-group">
+        <a href="top-picks.html" class="list-group-item list-group-item-action">Top Picks</a>
+        <a href="upcoming-games.html" class="list-group-item list-group-item-action">Upcoming Games</a>
+        <a href="retro-corner.html" class="list-group-item list-group-item-action">Retro Corner</a>
+      </div>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="HD-wallpaper-how-to-get-zilong-glorious-general-skin-mobile-legends-ml-zilong-epic-skin.jpg" class="card-img-top" alt="Game 1">
+          <div class="card-body">
+            <h5 class="card-title">Mobile Legend - A Masterpiece</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><mark>Published: July 14, 2016</mark></h6>
+            <p class="card-text">FromSoftware once again delivers a stellar RPG experience that blends punishing difficulty with breathtaking open-world exploration.</p>
+            <p class="card-text">The game is free-to-play and is only monetized through in-game purchases like characters and skins. Each player can control a selectable character, called a Hero, with unique abilities and traits.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="Minecraft.jpg" class="card-img-top" alt="Game 2">
+          <div class="card-body">
+            <h5 class="card-title">Minecraft the OG game</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><mark>Published: May 17, 2009</mark></h6>
+            <p class="card-text">Minecraft is a sandbox video game where players can explore a procedurally generated, three-dimensional world, build structures, and craft items.</p>
+            <p class="card-text">Players can choose from different game modes, including Survival, where they must gather resources and fight off enemies, and Creative, where they have unlimited resources and the ability to fly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">© 2025 Game Reviews Hub. Apostado_Always_So_Handsome.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
